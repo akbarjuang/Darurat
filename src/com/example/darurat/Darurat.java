@@ -67,7 +67,12 @@ public class Darurat extends Activity {
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
-				Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				
+				//Modif Vai
+				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
+				
+				//end of modif
 				Bundle b = new Bundle();
 				b.putDouble("Latitude", lat);
 				b.putDouble("Longitude", lng);
@@ -171,7 +176,11 @@ public class Darurat extends Activity {
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
-				Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				//Modif Vai
+				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
+				
+				//end of modif
 				Bundle b = new Bundle();
 				b.putDouble("Latitude", lat);
 				b.putDouble("Longitude", lng);
@@ -233,7 +242,14 @@ public class Darurat extends Activity {
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
-				Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				
+				
+				//Modif Vai
+				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
+				
+				//end of modif
+				
 				Bundle b = new Bundle();
 				b.putDouble("Latitude", lat);
 				b.putDouble("Longitude", lng);
@@ -295,7 +311,14 @@ public class Darurat extends Activity {
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
-				Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				
+				
+				//Modif Vai
+				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
+				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
+				
+				//end of modif
+				
 				Bundle b = new Bundle();
 				b.putDouble("Latitude", lat);
 				b.putDouble("Longitude", lng);

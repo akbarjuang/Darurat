@@ -55,6 +55,10 @@
             android:name="com.example.darurat.Coba"
             android:label="@string/title_activity_coba" >
         </activity>
+        <activity
+            android:name="com.example.darurat.TempActivity"
+            android:label="Tutorial" >
+        </activity>
     </application>
 
 </manifest>

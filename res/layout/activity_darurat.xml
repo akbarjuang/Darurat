@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,42 +6,145 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="9"
+    android:orientation="vertical"
+    android:background = "@drawable/sar"
     tools:context=".Darurat" >
 
-    <ImageButton
-        android:id="@+id/rs"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/rs" />
+    <LinearLayout 
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2.8"
+        android:orientation="horizontal"
+        android:weightSum="3">
+		
+        <View 
+            android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1"/>
+        
+        <ImageButton
+	        android:id="@+id/rs"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:background="@android:color/transparent"
+	        android:scaleType="centerInside"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/rs" />
+	    
+        <View 
+            android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.2"/>
+        
+	    <ImageButton
+	        android:id="@+id/sar"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:background="@android:color/transparent"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/sar" />
+	
+	    <View 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.2"/>
+	    
+	    <ImageButton
+	        android:id="@+id/polisi"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:background="@android:color/transparent"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/polisi" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2">
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2.8"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-    <ImageButton
-        android:id="@+id/polisi"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_above="@+id/pmk"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="38dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/polisi" />
+        <View 
+            android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1.1"/>
+        <ImageButton
+            android:id="@+id/pribadi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/pmk" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2">
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2.8"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        
+        <View 
+            android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.1"/>
+        
+		<ImageButton
+	        android:id="@+id/temp1"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:background="@android:color/transparent"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/pmk" />
 
-    <ImageButton
-        android:id="@+id/pmk"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@+id/rs"
-        android:layout_below="@+id/rs"
-        android:layout_marginTop="46dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pmk" />
-
-    <ImageButton
-        android:id="@+id/sar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@+id/polisi"
-        android:layout_alignTop="@+id/pmk"
-        android:scaleType="centerCrop"
-        android:src="@drawable/sar" />
-
-</RelativeLayout>
+	    <View 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.2"/>
+		    
+	    
+	    <ImageButton
+	        android:id="@+id/pmk"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:background="@android:color/transparent"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/pmk" />
+	    
+	    <View 
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.2"/>
+	    
+	    <ImageButton
+	        android:id="@+id/temp2"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:scaleType="centerInside"
+	        android:background="@android:color/transparent"
+	        android:layout_weight="0.8"
+	        android:src="@drawable/pmk" />
+	        
+    </LinearLayout>
+        
+</LinearLayout>
