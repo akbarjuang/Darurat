@@ -1,5 +1,12 @@
 package com.example.darurat;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
@@ -28,9 +35,16 @@ public class Darurat extends Activity {
 	HospitalDatabase rsdb;
 	SARDatabase sardb;
 	
+	//Analytic data
+	Map<String, String> dimensions;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        Parse.initialize(this, "e2S1uam9fRBp6EABlDz5VbBfddWR6J8HVd22IP4f", "2amlNKlVIBv8eDbh0uj5v1XCF2U1EvJpk4UUe59C");
+        ParseAnalytics.trackAppOpened(getIntent());
+        
         Log.d("Button", "udah lewat sini");
         setContentView(R.layout.activity_darurat);
         
@@ -69,6 +83,14 @@ public class Darurat extends Activity {
 				double lng = gps.getLongitude();
 				
 				//Modif Vai
+				
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "Polisi");
+				ParseAnalytics.trackEvent("onLongClick", dimensions);
+			    
+				
+				
 				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
 				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
 				
@@ -86,6 +108,13 @@ public class Darurat extends Activity {
 		button1.setOnClickListener(new OnClickListener() { 
 			@Override
 			public void onClick(View arg0) {
+				
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "Polisi");
+				ParseAnalytics.trackEvent("onClick", dimensions);
+			    
+				
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
@@ -128,6 +157,12 @@ public class Darurat extends Activity {
 		button2.setOnClickListener(new OnClickListener() { 
 			@Override
 			public void onClick(View arg0) {
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "RS");
+				ParseAnalytics.trackEvent("onClick", dimensions);
+			    
+				
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
@@ -177,6 +212,13 @@ public class Darurat extends Activity {
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
 				//Modif Vai
+				
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "RS");
+				ParseAnalytics.trackEvent("onLongClick", dimensions);
+			    
+				
 				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
 				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
 				
@@ -194,6 +236,12 @@ public class Darurat extends Activity {
 		button3.setOnClickListener(new OnClickListener() { 
 			@Override
 			public void onClick(View arg0) {
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "SAR");
+				ParseAnalytics.trackEvent("onClick", dimensions);
+			    
+				
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
@@ -245,6 +293,12 @@ public class Darurat extends Activity {
 				
 				
 				//Modif Vai
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "SAR");
+				ParseAnalytics.trackEvent("onLongClick", dimensions);
+			    
+				
 				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
 				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
 				
@@ -263,6 +317,12 @@ public class Darurat extends Activity {
 		button4.setOnClickListener(new OnClickListener() { 
 			@Override
 			public void onClick(View arg0) {
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "PK");
+				ParseAnalytics.trackEvent("onClick", dimensions);
+			    
+				
 				GPSTracker gps = new GPSTracker(getApplicationContext());
 				double lat = gps.getLatitude();
 				double lng = gps.getLongitude();
@@ -314,6 +374,13 @@ public class Darurat extends Activity {
 				
 				
 				//Modif Vai
+				
+				//Send analytics
+				dimensions = new HashMap<String, String>();
+				dimensions.put("perusahaan", "PK");
+				ParseAnalytics.trackEvent("onLongClick", dimensions);
+			    
+				
 				//Intent mapIntent = new Intent(getApplicationContext(),MapViewActivity.class);
 				Intent mapIntent = new Intent(getApplicationContext(),TempActivity.class);
 				
